@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>https://joaopaulovieira.github.io/deimos-simulator/post/welcome-message/</loc>
+    <lastmod>2018-04-02T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://joaopaulovieira.github.io/deimos-simulator/authors/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://joaopaulovieira.github.io/deimos-simulator/categories/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://joaopaulovieira.github.io/deimos-simulator/</loc>
+    <lastmod>2018-04-02T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://joaopaulovieira.github.io/deimos-simulator/tags/hugo/</loc>
+    <lastmod>2018-04-02T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://joaopaulovieira.github.io/deimos-simulator/categories/others/</loc>
+    <lastmod>2018-04-02T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://joaopaulovieira.github.io/deimos-simulator/post/</loc>
+    <lastmod>2018-04-02T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://joaopaulovieira.github.io/deimos-simulator/series/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://joaopaulovieira.github.io/deimos-simulator/tags/small-talk/</loc>
+    <lastmod>2018-04-02T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://joaopaulovieira.github.io/deimos-simulator/tags/</loc>
+    <lastmod>2018-04-02T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+</urlset>
