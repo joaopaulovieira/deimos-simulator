@@ -1,0 +1,27 @@
+# About Widget config
+[about]
+title = " "
+description = "Deimos(Ancient Greek: Δεῖμος, pronounced [dêːmos], meaning “dread”) is the god of terror in Greek mythology.\n\nHe was a son of Ares and Aphrodite, and the twin brother of Phobos.\n\nDeimos served to represent the feelings of dread that befell those in the midst of battle"
+logo = "/images/logo.png"
+
+# Recent Posts Widget config
+[recent_posts]
+title = ""
+length = 4
+excludeTypes = ["page"]
+
+# Sidebar Menu Widget config
+[sidebar_menu]
+title = ""
+mirror = ""
+
+# Social Menu Widget config
+[social_menu]
+title = ""
+platforms = ["github","facebook","twitter","instagram","email","codepen","gitlab","linkedin","telegram","google_scholar"]
+
+# Taxonomy Cloud Widget config
+[taxonomy_cloud]
+title = ""
+taxonomy = "tags"
+shuffle = true

@@ -27,8 +27,8 @@ title404 = "Nothing's here!"
 
 [params.assets]
 favicon = "favicon.ico"
-customCSS = ["css/custom.css"]
-customJS = ["js/custom.js"]
+customCSS = ["css/widget_about.css"]
+# customJS = ["js/custom.js"]
 gopher = "" # used in 404 template ( Generator: https://gopherize.me )
 
 [params.copyright]
@@ -52,9 +52,9 @@ hideMainMenu = false
 enable = true
 
 [params.widgets]
-homepage = ["recent_posts"]
-sidebar = ["about","taxonomy_cloud"]
-footer = ["social_menu"]
+homepage = []
+sidebar = ["about", "social_menu"]
+footer = []
 
 [params.opengraph.facebook]
 admins = [] # array of Facebook IDs
@@ -72,7 +72,7 @@ titleSeparator = "•"
 codepen = ""
 email = ""
 facebook = ""
-github = "joaopaulovieira"
+github = "joaopaulovieira/deimos-simulator"
 gitlab = ""
 instagram = ""
 linkedin = ""
@@ -102,11 +102,11 @@ tag = "tags"
 [permalinks]
 page = "/:slug/"
 
-[[menu.main]]
-name = "main"
-weight = -70
-identifier = "joaopaulovieira"
-url = ""
+# [[menu.main]]
+# identifier = "main"
+# name = "main"
+# weight = -70
+# url = ""
 
 [blackfriday]
 hrefTargetBlank = true
