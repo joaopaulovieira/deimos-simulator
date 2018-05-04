@@ -1,16 +1,14 @@
-#player-wrapper {
-  height: 360px;
-}
-
 @media (max-width:410px) {
   #player-wrapper {
     height: 188px;
+    width: 335px;
   }
 }
 
 @media (min-width:411px) and (max-width:490px) {
   #player-wrapper {
     height: 209px;
+    width: 374px;
   }
 }
 
@@ -22,7 +20,8 @@
 
 @media (min-width: 701px) {
   #player-wrapper {
-    width: 569px;
+    height: 360px;
+    width: 640px;
   }
 }
 

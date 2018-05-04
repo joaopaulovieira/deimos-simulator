@@ -124,7 +124,7 @@
   <div id="player-wrapper"></div>
 </div>
 <script>
-  
+  var playerElement = document.getElementById("player-wrapper");
   
   
   
@@ -138,8 +138,8 @@
     source: 'sources/fantastico360.mp4',
     poster: 'images/fantastico360.jpg',
     parentId: "#player-wrapper",
-    width: 640,
-    height: 360,
+    height: playerElement.clientHeight,
+    width: playerElement.clientWidth,
     plugins: {container:[ClapprVR.default.Video360], core:[ClapprVR.ClapprVR]},
   });
   player.getPlugin('click_to_pause').disable();
