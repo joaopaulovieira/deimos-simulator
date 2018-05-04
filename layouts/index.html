@@ -7,15 +7,17 @@
 </div>
 {{ end }}
 
-<div id="player-wrapper"></div>
+<div class="container player-container">
+  <div id="player-wrapper"></div>
+</div>
 <script>
   var playerElement = document.getElementById("player-wrapper");
   var player = new Clappr.Player({
   source: 'http://clappr.io/highline.mp4',
   poster: 'http://clappr.io/poster.png',
   mute: true,
-  height: 360,
-  width: 640
+  height: "100%",
+  width: "100%",
   });
   player.attachTo(playerElement);
 </script>
