@@ -1,5 +1,5 @@
 #player-wrapper {
-  height: 320px;
+  height: 360px;
 }
 
 @media (max-width:410px) {
@@ -24,4 +24,9 @@
   #player-wrapper {
     width: 569px;
   }
+}
+
+canvas {
+  height: 100% !important;
+  width: 100% !important;
 }

@@ -1,0 +1,11 @@
+<meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<meta name='description' content='{{ partial "data/description" . }}'>
+<meta name='theme-color' content='{{- .Site.Params.settings.accentColor | default "#ffcd00" -}}'>
+
+<!-- Origin Trial Token, feature = WebVR (For Chrome M59+), origin = https://p.glbimg.com, expires = 2017-08-18 -->
+<meta http-equiv="origin-trial" data-feature="WebVR (For Chrome M59+)" data-expires="2017-08-18" content="AnbvzLZj6dhXglVqDBtqs6lvLaup1/qpXzRvl7Un6CBra5qtsQK4cPhYOu14hXfWZRIcjEP4t8Q+k533cH4iDAgAAABOeyJvcmlnaW4iOiJodHRwczovL3AuZ2xiaW1nLmNvbTo0NDMiLCJmZWF0dXJlIjoiV2ViVlIxLjEiLCJleHBpcnkiOjE1MDMwMTcwMDB9">
+
+{{ partial "head/opengraph" . }}
+
+{{ .Hugo.Generator }}

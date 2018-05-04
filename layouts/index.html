@@ -11,15 +11,25 @@
   <div id="player-wrapper"></div>
 </div>
 <script>
-  var playerElement = document.getElementById("player-wrapper");
+  // var playerElement = document.getElementById("player-wrapper");
+  // var player = new Clappr.Player({
+  // source: 'http://clappr.io/highline.mp4',
+  // poster: 'http://clappr.io/poster.png',
+  // mute: true,
+  // height: "100%",
+  // width: "100%",
+  // });
+  // player.attachTo(playerElement);
+
   var player = new Clappr.Player({
-  source: 'http://clappr.io/highline.mp4',
-  poster: 'http://clappr.io/poster.png',
-  mute: true,
-  height: "100%",
-  width: "100%",
+    source: 'sources/fantastico360.mp4',
+    poster: 'images/fantastico360.jpg',
+    parentId: "#player-wrapper",
+    width: 640,
+    height: 360,
+    plugins: {container:[ClapprVR.default.Video360], core:[ClapprVR.ClapprVR]},
   });
-  player.attachTo(playerElement);
+  player.getPlugin('click_to_pause').disable();
 </script>
 
 {{- $homepageWidgets := .Site.Params.widgets.homepage -}}
