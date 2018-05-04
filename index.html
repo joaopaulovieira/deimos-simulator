@@ -22,7 +22,7 @@
   
   
   <link rel='icon' href='/deimos-simulator/favicon.ico'>
-<link rel='stylesheet' href='/deimos-simulator/assets/css/main.b0a0b202.css'><link rel='stylesheet' href='/deimos-simulator/css/widget_about.css'><style>
+<link rel='stylesheet' href='/deimos-simulator/assets/css/main.b0a0b202.css'><link rel='stylesheet' href='/deimos-simulator/css/widget_about.css'><link rel='stylesheet' href='/deimos-simulator/css/player_container.css'><style>
 :root{--color-accent:#000000;}
 </style>
 
@@ -116,15 +116,17 @@
 
 
 
-<div id="player-wrapper"></div>
+<div class="container player-container">
+  <div id="player-wrapper"></div>
+</div>
 <script>
   var playerElement = document.getElementById("player-wrapper");
   var player = new Clappr.Player({
   source: 'http://clappr.io/highline.mp4',
   poster: 'http://clappr.io/poster.png',
   mute: true,
-  height: 360,
-  width: 640
+  height: "100%",
+  width: "100%",
   });
   player.attachTo(playerElement);
 </script>      </main>
