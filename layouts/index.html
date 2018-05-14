@@ -12,24 +12,26 @@
 </div>
 <script>
   var playerElement = document.getElementById("player-wrapper");
-  // var player = new Clappr.Player({
-  // source: 'http://clappr.io/highline.mp4',
-  // poster: 'http://clappr.io/poster.png',
-  // mute: true,
-  // height: "100%",
-  // width: "100%",
-  // });
-  // player.attachTo(playerElement);
-
   var player = new Clappr.Player({
     source: 'sources/fantastico360.mp4',
     poster: 'images/fantastico360.jpg',
-    parentId: "#player-wrapper",
     height: playerElement.clientHeight,
     width: playerElement.clientWidth,
     plugins: {container:[ClapprVR.default.Video360], core:[ClapprVR.ClapprVR]},
   });
-  player.getPlugin('click_to_pause').disable();
+  try {
+    player.attachTo(playerElement);
+    player.getPlugin('click_to_pause').disable();
+  } catch {
+    var paragraph = document.createElement("p");
+    var link = document.createElement("a");
+    playerElement.appendChild(paragraph);
+    playerElement.appendChild(link);
+    paragraph.innerText = 'Your browser does not support 360 videos :/\nCheck out the list of browsers that support this technology at the link below.\n\n';
+    link.href = 'https://webvr.info/developers/'
+    link.innerText = 'https://webvr.info/developers/'
+    link.style.color = 'rgb(60, 88, 164)'
+  }
 </script>
 
 {{- $homepageWidgets := .Site.Params.widgets.homepage -}}
