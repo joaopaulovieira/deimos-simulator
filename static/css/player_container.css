@@ -29,3 +29,20 @@ canvas {
   height: 100% !important;
   width: 100% !important;
 }
+
+.load-wrapper button {
+  margin-left: 30%;
+}
+
+.select-video-load {
+  margin-top: 50px;
+  margin-bottom: 20px;
+}
+
+.select-video-load .video-list {
+  width: 40%;
+}
+
+.text-video-load .video-input {
+  width: 40%;
+}

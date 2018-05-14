@@ -9,6 +9,19 @@
 
 <div class="container player-container">
   <div id="player-wrapper"></div>
+  <div class="load-container">
+    <div class="load-wrapper select-video-load">
+      <select class="video-list">
+        <option value="fantastico360" selected>fantastico360</option>
+        <option value="http://clappr.io/highline.mp4">Highline</option>
+      </select>
+      <button class="select-load-button">Load</button>
+    </div>
+    <div class=" load-wrapper text-video-load">
+      <input class="video-input" type="text" placeholder="paste video link here!"></input>
+      <button class="text-load-button">Load</button>
+    </div>
+  </div>
 </div>
 <script>
   var playerElement = document.getElementById("player-wrapper");
@@ -19,10 +32,23 @@
     width: playerElement.clientWidth,
     plugins: {container:[ClapprVR.default.Video360], core:[ClapprVR.ClapprVR]},
   });
+
+  var load_container = document.querySelector('.load-container');
+  load_container.querySelector('.text-load-button').addEventListener("click", function(event) {
+    var video_url_text = load_container.querySelector('.video-input')
+    video_url_text !== '' && player.configure({ source: video_url_text.value, poster: '' });
+  }, false);
+  load_container.querySelector('.select-load-button').addEventListener("click", function(event) {
+    var select = load_container.querySelector('.video-list');
+    var data = select[select.selectedIndex].value === 'fantastico360' ? { source: 'sources/fantastico360.mp4', poster: 'images/fantastico360.jpg' } : { source: 'http://clappr.io/highline.mp4', poster: 'http://clappr.io/poster.png' }
+    player.configure(data)
+  }, false);
+
   try {
     player.attachTo(playerElement);
     player.getPlugin('click_to_pause').disable();
   } catch {
+    load_container.style.visibility = 'hidden';
     var paragraph = document.createElement("p");
     var link = document.createElement("a");
     playerElement.appendChild(paragraph);
