@@ -8,12 +8,15 @@
 {{ end }}
 
 <div class="container player-container">
+  <!-- <div class="video-360-wrapper">
+    <iframe src="https://h5.veer.tv/player?vid=stormrunner-360-vr-roller-coaster-ride-890" frameborder="0" allowfullscreen="true" width="640" height="360"></iframe>
+  </div> -->
   <div id="player-wrapper"></div>
   <div class="load-container">
     <div class="load-wrapper select-video-load">
       <select class="video-list">
-        <option value="fantastico360" selected>fantastico360</option>
-        <option value="http://clappr.io/highline.mp4">Highline</option>
+        <option value="Rollercoaster" selected>Acrophobia 360</option>
+        <option value="Acrophobia_3D">Acrophobia 3D</option>
       </select>
       <button class="select-load-button">Load</button>
     </div>
@@ -26,7 +29,7 @@
 <script>
   var playerElement = document.getElementById("player-wrapper");
   var player = new Clappr.Player({
-    source: 'sources/fantastico360.mp4',
+    source: 'sources/Rollercoaster.mp4',
     poster: 'images/fantastico360.jpg',
     height: playerElement.clientHeight,
     width: playerElement.clientWidth,
@@ -40,7 +43,7 @@
   }, false);
   load_container.querySelector('.select-load-button').addEventListener("click", function(event) {
     var select = load_container.querySelector('.video-list');
-    var data = select[select.selectedIndex].value === 'fantastico360' ? { source: 'sources/fantastico360.mp4', poster: 'images/fantastico360.jpg' } : { source: 'http://clappr.io/highline.mp4', poster: 'http://clappr.io/poster.png' }
+    var data = select[select.selectedIndex].value === 'Rollercoaster' ? { source: 'sources/Rollercoaster.mp4' } : { source: 'sources/Acrophobia_3D.mp4' }
     player.configure(data)
   }, false);
 
