@@ -223,7 +223,7 @@ $export.P = 8;   // proto
 $export.B = 16;  // bind
 $export.W = 32;  // wrap
 $export.U = 64;  // safe
-$export.R = 128; // real proto method for `library` 
+$export.R = 128; // real proto method for `library`
 module.exports = $export;
 
 /***/ }),
@@ -5886,7 +5886,7 @@ $export.P = 8;   // proto
 $export.B = 16;  // bind
 $export.W = 32;  // wrap
 $export.U = 64;  // safe
-$export.R = 128; // real proto method for `library` 
+$export.R = 128; // real proto method for `library`
 module.exports = $export;
 
 /***/ }),
@@ -17612,7 +17612,7 @@ function isUndefined(arg) {
 // see https://tools.ietf.org/html/rfc1808
 
 /* jshint ignore:start */
-(function(root) { 
+(function(root) {
 /* jshint ignore:end */
 
   var URL_REGEX = /^((?:[^\/;?#]+:)?)(\/\/[^\/\;?#]*)?(.*?)??(;.*?)?(\?.*?)?(#.*?)?$/;
@@ -38621,7 +38621,7 @@ THREE.Euler.prototype = {
 		return function ( newOrder ) {
 
 			q.setFromEuler( this );
-			
+
 			return this.setFromQuaternion( q, newOrder );
 
 		};
@@ -39719,7 +39719,7 @@ THREE.Matrix3.prototype = {
 
 			return this.identity();
 		}
-		
+
 		var detInv = 1 / det;
 
 		te[ 0 ] = t11 * detInv;
@@ -40453,7 +40453,7 @@ THREE.Matrix4.prototype = {
 			return this.identity();
 
 		}
-		
+
 		var detInv = 1 / det;
 
 		te[ 0 ] = t11 * detInv;
@@ -67943,7 +67943,7 @@ THREE.SpritePlugin = function ( renderer, sprites ) {
 	}
 
 	function painterSortStable ( a, b ) {
-		
+
 		if ( a.renderOrder !== b.renderOrder ) {
 
 			return a.renderOrder - b.renderOrder;
@@ -71094,7 +71094,7 @@ THREE.CubicBezierCurve.prototype.getPoint = function ( t ) {
 
 	var b3 = THREE.ShapeUtils.b3;
 
-	return new THREE.Vector2( 
+	return new THREE.Vector2(
 		b3( t, this.v0.x, this.v1.x, this.v2.x, this.v3.x ),
 		b3( t, this.v0.y, this.v1.y, this.v2.y, this.v3.y )
 	);
@@ -71105,7 +71105,7 @@ THREE.CubicBezierCurve.prototype.getTangent = function( t ) {
 
 	var tangentCubicBezier = THREE.CurveUtils.tangentCubicBezier;
 
-	return new THREE.Vector2( 
+	return new THREE.Vector2(
 		tangentCubicBezier( t, this.v0.x, this.v1.x, this.v2.x, this.v3.x ),
 		tangentCubicBezier( t, this.v0.y, this.v1.y, this.v2.y, this.v3.y )
 	).normalize();
@@ -71167,7 +71167,7 @@ THREE.EllipseCurve = function ( aX, aY, xRadius, yRadius, aStartAngle, aEndAngle
 	this.aEndAngle = aEndAngle;
 
 	this.aClockwise = aClockwise;
-	
+
 	this.aRotation = aRotation || 0;
 
 };
@@ -71193,7 +71193,7 @@ THREE.EllipseCurve.prototype.getPoint = function ( t ) {
 		angle = this.aStartAngle + t * deltaAngle;
 
 	}
-	
+
 	var x = this.aX + this.xRadius * Math.cos( angle );
 	var y = this.aY + this.yRadius * Math.sin( angle );
 
@@ -71276,7 +71276,7 @@ THREE.QuadraticBezierCurve3 = THREE.Curve.create(
 
 	function ( t ) {
 
-		var b2 = THREE.ShapeUtils.b2;		
+		var b2 = THREE.ShapeUtils.b2;
 
 		return new THREE.Vector3(
 			b2( t, this.v0.x, this.v1.x, this.v2.x ),
@@ -76861,7 +76861,7 @@ var Controls = function () {
     this.el = this.renderer.el;
     this.theta = this.initialYaw * Math.PI / 180;
     this.phi = 0;
-    this.velo = _utils2.default.isiOS() ? 0.02 : 1.6;
+    this.velo = 0.02;
     this.rotateStart = new _threejs2.default.Vector2();
     this.rotateEnd = new _threejs2.default.Vector2();
     this.rotateDelta = new _threejs2.default.Vector2();
