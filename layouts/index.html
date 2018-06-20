@@ -8,14 +8,11 @@
 {{ end }}
 
 <div class="container player-container">
-  <!-- <div class="video-360-wrapper">
-    <iframe src="https://h5.veer.tv/player?vid=stormrunner-360-vr-roller-coaster-ride-890" frameborder="0" allowfullscreen="true" width="640" height="360"></iframe>
-  </div> -->
   <div id="player-wrapper"></div>
   <div class="load-container">
     <div class="load-wrapper select-video-load">
       <select class="video-list">
-        <option value="Rollercoaster" selected>Acrophobia 360</option>
+        <option value="Claustrophobia" selected>Claustrophobia 360</option>
         <option value="Acrophobia_3D">Acrophobia 3D</option>
       </select>
       <button class="select-load-button">Load</button>
@@ -29,10 +26,11 @@
 <script>
   var playerElement = document.getElementById("player-wrapper");
   var player = new Clappr.Player({
-    source: 'sources/Rollercoaster.mp4',
+    source: 'sources/Claustrophobia.mp4',
     poster: 'images/fantastico360.jpg',
     height: playerElement.clientHeight,
     width: playerElement.clientWidth,
+    loop: true,
     plugins: {container:[ClapprVR.default.Video360], core:[ClapprVR.ClapprVR]},
   });
 
@@ -43,23 +41,27 @@
   }, false);
   load_container.querySelector('.select-load-button').addEventListener("click", function(event) {
     var select = load_container.querySelector('.video-list');
-    var data = select[select.selectedIndex].value === 'Rollercoaster' ? { source: 'sources/Rollercoaster.mp4' } : { source: 'sources/Acrophobia_3D.mp4' }
+    var data = select[select.selectedIndex].value === 'Claustrophobia' ? { source: 'sources/Claustrophobia.mp4' } : { source: 'sources/Acrophobia_3D.mp4' }
     player.configure(data)
   }, false);
 
-  try {
-    player.attachTo(playerElement);
-    player.getPlugin('click_to_pause').disable();
-  } catch {
-    load_container.style.visibility = 'hidden';
-    var paragraph = document.createElement("p");
-    var link = document.createElement("a");
-    playerElement.appendChild(paragraph);
-    playerElement.appendChild(link);
-    paragraph.innerText = 'Your browser does not support 360 videos :/\nCheck out the list of browsers that support this technology at the link below.\n\n';
-    link.href = 'https://webvr.info/developers/'
-    link.innerText = 'https://webvr.info/developers/'
-    link.style.color = 'rgb(60, 88, 164)'
+  player.attachTo(playerElement);
+  checkVRAvailability()
+
+  function checkVRAvailability () {
+    try {
+      player.getPlugin('click_to_pause').disable();
+    } catch {
+      load_container.style.visibility = 'hidden';
+      var paragraph = document.createElement("p");
+      var link = document.createElement("a");
+      playerElement.appendChild(paragraph);
+      playerElement.appendChild(link);
+      paragraph.innerText = 'Your browser does not support 360 videos :/\nCheck out the list of browsers that support this technology at the link below.\n\n';
+      link.href = 'https://webvr.info/developers/'
+      link.innerText = 'https://webvr.info/developers/'
+      link.style.color = 'rgb(60, 88, 164)'
+    };
   }
 </script>
 
